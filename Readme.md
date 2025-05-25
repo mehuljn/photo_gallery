@@ -49,7 +49,7 @@ Follow these steps to get your AI-powered photo gallery up and running locally.
 ```bash
 git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
 cd YOUR_REPO_NAME
-
+```
 
 ### 2. Set Up Virtual Environment
 
@@ -61,6 +61,7 @@ python -m venv venv
 venv\Scripts\activate
 # On macOS/Linux
 source venv/bin/activate
+```
 
 ### 3. Get dependencies
 
@@ -68,6 +69,7 @@ Install  dependencies.
 
 ```bash
 pip install Flask google-generativeai Pillow
+```
 
 ### 4. Configure Your Gemini API Key
 
@@ -79,11 +81,12 @@ export GEMINI_API_KEY='YOUR_GEMINI_API_KEY'
 
 # On Windows (in Command Prompt)
 set GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
 
 ### 5. Run Flask
 ```bash
 flask run
-
+```
 ---
 
 ## Usage
