@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Your Gallery{% endblock %}
+
+{% block content %}
+    <h2>Your Photos</h2>
+    {% if image_files %}
+        <div class="gallery">
+            {% for filename in image_files %}
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="{{ filename }}">
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No images uploaded yet. <a href="{{ url_for('upload_file') }}">Upload one!</a></p>
+    {% endif %}
+{% endblock %}
