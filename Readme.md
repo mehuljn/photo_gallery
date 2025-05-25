@@ -49,3 +49,47 @@ Follow these steps to get your AI-powered photo gallery up and running locally.
 ```bash
 git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
 cd YOUR_REPO_NAME
+
+
+### 2. Set Up Virtual Environment
+
+It's good practice to use a virtual environment to manage dependencies.
+
+```bash
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
+
+### 3. Get dependencies
+
+Install  dependencies.
+
+```bash
+pip install Flask google-generativeai Pillow
+
+### 4. Configure Your Gemini API Key
+
+Set your Gemini API key as an environment variable. Replace YOUR_GEMINI_API_KEY with the actual key you obtained from Google AI Studio.
+
+```bash
+# On macOS/Linux
+export GEMINI_API_KEY='YOUR_GEMINI_API_KEY'
+
+# On Windows (in Command Prompt)
+set GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+
+### 5. Run Flask
+```bash
+flask run
+
+---
+
+## Usage
+
+1.  **Open your browser** to `http://127.0.0.1:5000/`.
+2.  Use the "Upload Image" link to add some photos to your gallery.
+3.  Click the **💬 chat bubble** in the bottom-right corner to open the AI assistant.
+4.  Type your question related to what you see on the page (e.g., "Describe the images in the gallery," "What's the main color of the header?").
+5.  Press Enter or click "Send" to get a response from Gemini 1.5 Flash!
